@@ -16,14 +16,13 @@
 
     <script src="index.js"></script>
     <script>
-      const urlParam = new URLSearchParams(window.location.search);
+      var urlParam = new URLSearchParams(window.location.search);
 
-      const product = urlParam.get("product");
-      const price = urlParam.get("price");
+      var product = urlParam.get("product");
+      var price = urlParam.get("price");
 
-      console.log(product, price);
-
-      //Lägg in och fyll datalagret vid färdig transaktion
+      //Fyll datalagret vid färdig transaktion
+      
     </script>
   </body>
 </html>

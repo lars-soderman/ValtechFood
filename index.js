@@ -1,16 +1,17 @@
-const buttons = document.querySelectorAll("button");
-
-[].forEach.call(buttons, function (button) {
+[].forEach.call(document.querySelectorAll("button"), function (button) {
   button.addEventListener(
     "click",
     function () {
-      //Lägg in och fyll datalagret vid checkout
+      var product = button.getAttribute("data-product");
+      var price = button.getAttribute("data-price");
+
+      //Fyll datalagret vid checkout
 
       window.location =
         "thankyou.html?product=" +
-        button.getAttribute("data-product") +
+        product +
         "&price=" +
-        button.getAttribute("data-price");
+        price
     },
     false
   );
